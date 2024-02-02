@@ -3,70 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample Webpage</title>
+    <title>Download PDF</title>
     <style>
-        /* Reset default margin and padding */
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f4f4f4;
         }
-
-        /* Style for the header */
-        header {
-            background-color: #333;
-            color: #fff;
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
             text-align: center;
-            padding: 20px 0;
         }
-
-        /* Style for the navigation bar */
-        nav {
-            background-color: #666;
-            color: #fff;
+        p {
             text-align: center;
-            padding: 10px 0;
+            margin-top: 20px;
         }
-
-        nav a {
+        .download-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
-
-        /* Style for the content section */
-        section {
-            padding: 20px;
-        }
-
-        /* Style for the footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .download-link:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-<header>
-    <h1>Sample Webpage</h1>
-</header>
-<nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-<section>
-    <h2>Welcome to Our Website</h2>
-    <p>This is a sample webpage layout created using HTML and CSS.</p>
-</section>
-<footer>
-    <p>&copy; 2024 Sample Webpage. All rights reserved.</p>
-</footer>
+
+<div class="container">
+    <h1>Download PDF</h1>
+    <p>Click the button below to download the PDF file:</p>
+    <a href="cv.pdf" class="download-link" download>Download PDF</a>
+</div>
+
 </body>
 </html>
