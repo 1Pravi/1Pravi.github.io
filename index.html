@@ -70,29 +70,6 @@
             margin-top: 10px;
         }
 
-        @media only screen and (max-width: 600px) {
-            body::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-image: url('background_mobile.jpg');
-                background-size: cover;
-                filter: blur(5px);
-                z-index: 1;
-            }
-        }
-
-        /* Additional style for backdrop filter */
-        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            body::before {
-                -webkit-backdrop-filter: blur(5px); /* For Chrome, Safari, and Opera */
-                backdrop-filter: blur(5px); /* Standard syntax */
-            }
-        }
-
     </style>
 </head>
 <body>
