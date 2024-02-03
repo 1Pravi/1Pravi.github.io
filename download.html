@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download PDF</title>
+  <title>Files</title>
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
   <style>
     body {
@@ -28,34 +28,31 @@
       z-index: -1; /* Ensure it's behind other content */
     }
     .container {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       padding: 20px;
       position: relative; /* Ensure content is above the background image */
       z-index: 1; /* Ensure it's above the background image */
     }
-    h1 {
-      font-size: 48px;
-      font-weight: 700;
+    .file {
       margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    a {
+    .file h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .file a {
       display: inline-block;
       background: linear-gradient(to right, #36d1dc, #5b86e5);
       border: none;
       color: #fff;
-      padding: 15px 30px;
+      padding: 10px 20px;
       border-radius: 25px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 16px;
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
-    a:hover {
+    .file a:hover {
       background: linear-gradient(to right, #33bdef, #1d8ce6);
     }
   </style>
@@ -65,9 +62,19 @@
 <div class="background-image"></div>
 
 <div class="container">
-  <h1>Praveen's files</h1>
-  <p>CV file.</p>
-  <a href="cv.pdf" download>Download PDF</a>
+  <div class="file">
+    <h2>CV File</h2>
+    <a href="cv.pdf" download>Download CV</a>
+  </div>
+  <div class="file">
+    <h2>Portfolio File</h2>
+    <a href="portfolio.pdf" download>Download Portfolio</a>
+  </div>
+  <div class="file">
+    <h2>Project Report</h2>
+    <a href="project_report.pdf" download>Download Project Report</a>
+  </div>
+  <!-- Add more file showcases as needed -->
 </div>
 
 </body>
