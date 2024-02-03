@@ -3,52 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download PDF</title>
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #000;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #fff;
         }
         h1 {
-            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        p {
-            text-align: center;
-            margin-top: 20px;
+        .security-text {
+            font-size: 24px;
+            margin-bottom: 30px;
         }
-        .download-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
+        input[type="password"] {
+            width: 250px;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
             color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
             transition: background-color 0.3s ease;
         }
-        .download-link:hover {
-            background-color: #0056b3;
+        input[type="password"]::placeholder {
+            color: #fff;
+            opacity: 0.6;
+        }
+        input[type="password"]:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        button {
+            background: linear-gradient(to right, #36d1dc, #5b86e5);
+            border: none;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background: linear-gradient(to right, #33bdef, #1d8ce6);
+        }
+        .error {
+            color: #ff3333;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Download PDF</h1>
-    <p>Click the button below to download the PDF file:</p>
-    <a href="cv.pdf" class="download-link" download>Download PDF</a>
+    <h1>Praveen Security Server</h1>
+    <p class="security-text">Login to continue</p>
+    <label for="password"></label><input type="password" id="password" placeholder="Password" onkeypress="handleKeyPress(event)">
+    <button onclick="login()">Login</button>
+    <div id="error" class="error"></div>
 </div>
+
+<script>
+    function handleKeyPress(event) {
+        if (event.key === "Enter") {
+            login();
+        }
+    }
+
+    function login() {
+        var password = document.getElementById('password').value;
+        // Check password (replace this with your authentication logic)
+        if (password === "ironman") {
+            // Redirect to another page upon successful login
+            window.location.href = "download.html";
+        } else {
+            // Display error message for incorrect password
+            var errorDiv = document.getElementById('error');
+            errorDiv.textContent = "Incorrect password. Please try again.";
+        }
+    }
+</script>
 
 </body>
 </html>
