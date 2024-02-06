@@ -1,0 +1,117 @@
+class Queue {
+    private static final int MAX_SIZE = 5;
+    private int[] elements;
+    private int front, rear;
+    public Queue() {
+        elements = new int[MAX_SIZE];
+        front = rear = -1;
+    }
+    public boolean isEmpty() {
+        return front == -1;
+    }
+    public void enqueue(int element) {
+        if (rear == MAX_SIZE - 1) {
+            System.out.println("Queue is full. Cannot enqueue.");
+        } else {
+            if (front == -1) {
+                front = 0;
+            }
+            elements[++rear] = element;
+            System.out.println("Enqueued: " + element);
+        }
+    }
+    public void dequeue() {
+        if (isEmpty()) {
+            System.out.println("Queue is empty. Cannot dequeue.");
+        } else {
+            int removedElement = elements[front++];
+            System.out.println("Dequeued: " + removedElement);
+            if (front > rear) {
+                front = rear = -1;
+            }
+        }
+    }
+}
+public class QueueDemo {
+    public static void main(String[] args) {
+        // Create a queue
+        Queue myQueue = new Queue();
+        myQueue.enqueue(10);
+        myQueue.enqueue(20);
+        myQueue.enqueue(30);
+        myQueue.dequeue();
+        myQueue.dequeue();
+        myQueue.dequeue();
+        myQueue.dequeue();
+    }
+}
+
+Above Develop queue data structures using classes and objects.
+
+abstract class Sum {
+    abstract int sumOfTwo(int num1, int num2);
+    abstract int sumOfThree(int num1, int num2, int num3);
+}
+class SumOfTwo extends Sum {
+    @Override
+    int sumOfTwo(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    @Override
+    int sumOfThree(int num1, int num2, int num3) {
+        return 0;
+    }
+}
+class SumOfThree extends Sum {
+    @Override
+    int sumOfTwo(int num1, int num2) {
+        return 0;
+    }
+
+    @Override
+    int sumOfThree(int num1, int num2, int num3) {
+        return num1 + num2 + num3;
+    }
+}
+public class SumDemo {
+    public static void main(String[] args) {
+        Sum sumOfTwo = new SumOfTwo();
+        Sum sumOfThree = new SumOfThree();
+        int resultOfTwo = sumOfTwo.sumOfTwo(5, 7);
+        int resultOfThree = sumOfThree.sumOfThree(10, 15, 20);
+        System.out.println("Sum of Two: " + resultOfTwo);
+        System.out.println("Sum of Three: " + resultOfThree);
+    }
+}
+
+Above Write a Java Program to create an abstract class named sum of Two and sum of Three. Perform
+
+interface PrimeChecker {
+    boolean isPrime(int number);
+}
+class NumberChecker implements PrimeChecker {
+    @Override
+    public boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(number); i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+public class PrimeCheckDemo {
+    public static void main(String[] args) {
+        PrimeChecker primeChecker = new NumberChecker();
+        int numberToCheck = 17;
+        boolean isPrime = primeChecker.isPrime(numberToCheck);
+        System.out.println(numberToCheck + " is prime? " + isPrime);
+    }
+}
+
+Above Write a program to Check Prime Number using Interface.
+
