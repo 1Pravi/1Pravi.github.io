@@ -3,106 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PraveenGT</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Anonymous Pro', monospace;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('background.jpg');
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            text-align: center;
-            color: #fff;
-        }
-        h1 {
-            font-size: 42px;
-            font-weight: 1200;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        .security-text {
-            font-weight: 700;
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-        input[type="password"] {
-            width: 250px;
-            padding: 15px;
-            border: none;
-            border-radius: 25px;
-            outline: none;
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            font-size: 18px;
-            margin-bottom: 20px;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-        input[type="password"]::placeholder {
-            color: #fff;
-            opacity: 0.6;
-        }
-        input[type="password"]:focus {
-            background-color: rgba(255, 255, 255, 0.3);
-        }
-        button {
-            background: linear-gradient(to right, #36d1dc, #5b86e5);
-            border: none;
-            color: #fff;
-            padding: 15px 30px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background: linear-gradient(to right, #33bdef, #1d8ce6);
-        }
-        .error {
-            color: #ff3333;
-            margin-top: 10px;
-        }
-
-    </style>
+    <title>Praveen G Raj - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<header>
+    <div class="container header-content">
+        <div class="profile-pic">
+            <img src="profile.jpg" alt="Praveen G Raj">
+        </div>
+        <div class="header-text">
+            <h1>Praveen G</h1>
+            <p>B.Tech Student (Information Technology)</p>
+        </div>
+    </div>
+</header>
 
-<div class="container">
-    <h1>Praveen Security Server  https://chatgpt.com/share/6440db5c-dbf0-451a-ba6f-6cd1f8729e7a </h1>
-    <p class="security-text">Login to Access file system</p>
-    <input type="password" id="password" placeholder="Password" onkeypress="handleKeyPress(event)">
-    <button onclick="login()">Login</button>
-    <div id="error" class="error"></div>
-</div>
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-<script>
-    function handleKeyPress(event) {
-        if (event.key === "Enter") {
-            login();
-        }
-    }
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Enthusiastic B.Tech IT student with a passion for artificial intelligence, machine learning, and data science. Actively seeking an internship opportunity in the roles of Data Scientist, ML Engineer, Deep Learning Engineer, Data Analyst, Data Engineer, and Application Developer to contribute to innovative projects and further develop skills in the dynamic fields of Artificial Intelligence (AI) and Machine Learning (ML).</p>
+    </div>
+</section>
 
-    function login() {
-        var password = document.getElementById('password').value;
-        // Check password (replace this with your authentication logic)
-        if (password === "ironman") {
-            // Redirect to another page upon successful login
-            window.location.href = "download.html";
-        } else {
-            // Display error message for incorrect password
-            var errorDiv = document.getElementById('error');
-            errorDiv.textContent = "Incorrect password. Please try again.";
-        }
-    }
-</script>
+<section id="skills">
+    <div class="container">
+        <h2>Technical Skills</h2>
+        <ul>
+            <li>Data Analysis and Visualization: Python (Pandas, NumPy), Pyspark(for Big Data Analysis)</li>
+            <li>Machine Learning and Predictive Analytics: scikit-learn, Regression, Time Series, Forecasting, Model Deployment.</li>
+            <li>Cloud Computing and Big Data Technologies: Azure, Spark.</li>
+            <li>Application Deployment: Flask, Docker, Cloud Platforms (Azure).</li>
+        </ul>
+    </div>
+</section>
 
+<section id="education">
+    <div class="container">
+        <h2>Education</h2>
+        <p><strong>Bachelors of Technology in Information Technology</strong></p>
+        <p>Knowledge Institute of Technology, Salem (2022 - Present)</p>
+    </div>
+</section>
+
+<section id="experience">
+    <div class="container">
+        <h2>Experience</h2>
+        <p><strong>GitHub Open Source Contributions</strong></p>
+        <p>Contributed to various open-source projects on GitHub, focusing on AI, ML, and data science.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Projects</h2>
+        <!-- Add project details here -->
+        <div class="project">
+            <h3>Project One</h3>
+            <p>Deep Learning Framework for segmentation, regression and classification.</p>
+            <p>Link: <a href="https://github.com/1Pravi/GaNDLF" target="_blank">https://github.com/1Pravi/GaNDLF</a> </p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email: praveengraj11@gmail.com</p>
+        <p>GitHub: <a href="https://github.com/1Pravi" target="_blank">https://github.com/1Pravi</a></p>
+        <p>Twitter: <a href="https://twitter.com/pravi1cs" target="_blank">https://twitter.com/pravi1cs</a></p>
+        <p>Mobile No: +917871106755</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Praveen G</p>
+    </div>
+</footer>
 </body>
 </html>
